@@ -2,4 +2,4 @@
 
 ![Screenshot from website.](./src/assets/for-github.png)
 
-### Tech stack:React, SCSS
+**Tech stack:React, SCSS**
