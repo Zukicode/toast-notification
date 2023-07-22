@@ -4,6 +4,7 @@ import styles from './Message.module.scss';
 
 import { correctClassNameMessage } from 'utils/correctClassNameMessage';
 import { correctIconMessage } from 'utils/correctIconMessage';
+import { capitalizeFirstLetter } from 'utils/capitalizeFirstLetter';
 
 export const Message = ({ isVisibleMessage, activeMessage, closeMessage }) => {
 	return (
@@ -18,7 +19,9 @@ export const Message = ({ isVisibleMessage, activeMessage, closeMessage }) => {
 				<span className={styles.icon}>
 					<img src={correctIconMessage(activeMessage)} alt='icon' />
 				</span>
-				<p className={styles.title}>Error toast notification</p>
+				<p className={styles.title}>
+					{capitalizeFirstLetter(activeMessage)} toast notification
+				</p>
 			</div>
 			<button onClick={closeMessage} className={styles.close}>
 				<svg viewBox='0 0 20 19.84' xmlns='http://www.w3.org/2000/svg'>
